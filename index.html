@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="lib\bootstrap-3.3.7-dist\css\bootstrap.min.css"></link>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="stylesheet" href="css\main.css"></link>
+        <script src="lib\jquery-3.1.1.min.js"></script>
+        <script src="lib\flickity.pkgd.js"></script>
+        
+        <script src="lib\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+        <script src="lib\angular.min.js"></script>
+        <script src="lib\angular-ui-router.js"></script>
+        <script src="js\app.js"></script>
+    </head>
+    <body ng-app = "funteam">
+           <div ng-controller="funteamController as vm" >
+
+            <header aria-roledescription="header" role="header" class="row funHeader">
+                <div class="col-lg-1 col-md-1 col-xs-1" ng-click="vm.openDrawer()" > <h1><i class="material-icons iconHeader">menu</i></h1></div>    
+                <div class="col-lg-11 col-md-11 col-xs-11" >  <h1>THE FUN  TEAM</h1></div>    
+            </header>
+
+
+            <nav class="navigationFunTeam " role="navigation"   ng-class="{'navigationFunOpen': vm.isActive}">
+                <ul>
+                    <li><a ui-sref="home">Home</a></li>
+                    <li ><a ui-sref="event">Events</a></li>
+                    <li ><a ui-sref="gallery">Gallery</a></li>
+                    <li ><a ui-sref="contactUs">Contact US</a></li>
+                </ul>
+            </nav>
+            
+           <div class="mainView" ui-view>
+                    
+            </div>
+ 
+
+
+
+            <!--animation for the site -->
+            <div id="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
+</div>
+<!-- animation ends-->
+    </body>
+</html>
